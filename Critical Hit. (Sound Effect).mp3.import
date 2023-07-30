@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://u8peyg3lgddx"
+path="res://.godot/imported/Critical Hit. (Sound Effect).mp3-d0ddc27ae9335b731b50a600f432c2ae.mp3str"
+
+[deps]
+
+source_file="res://Critical Hit. (Sound Effect).mp3"
+dest_files=["res://.godot/imported/Critical Hit. (Sound Effect).mp3-d0ddc27ae9335b731b50a600f432c2ae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

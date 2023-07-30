@@ -1,0 +1,149 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbrdxpqn07odh"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_w43gd"]
+[ext_resource type="Texture2D" uid="uid://deabciv1j2r46" path="res://fire.png" id="2_7w457"]
+[ext_resource type="Texture2D" uid="uid://birr6s73rwj15" path="res://star.png" id="3_fm2n3"]
+[ext_resource type="AudioStream" uid="uid://c64tboe4njqhw" path="res://SOUND EFFECT TADA.mp3" id="4_yqhws"]
+[ext_resource type="Texture2D" uid="uid://fx304b7b6o" path="res://fire bottom.webp" id="5_cswhg"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_iyil1"]
+action = &"space"
+
+[sub_resource type="Shortcut" id="Shortcut_k4x3a"]
+events = [SubResource("InputEventAction_iyil1")]
+
+[node name="hud" type="CanvasLayer"]
+script = ExtResource("1_w43gd")
+
+[node name="fires" type="Node" parent="."]
+
+[node name="fire" type="Sprite2D" parent="fires"]
+position = Vector2(61, 764)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_cswhg")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="fires/fire"]
+offset_left = -230.0
+offset_top = 20.0
+offset_right = 188.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fire2" type="Sprite2D" parent="fires"]
+position = Vector2(465, 766)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_cswhg")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="fires/fire2"]
+offset_left = -230.0
+offset_top = 20.0
+offset_right = 188.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fire3" type="Sprite2D" parent="fires"]
+position = Vector2(328, 764)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_cswhg")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="fires/fire3"]
+offset_left = -230.0
+offset_top = 20.0
+offset_right = 188.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fire4" type="Sprite2D" parent="fires"]
+position = Vector2(199, 764)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_cswhg")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="fires/fire4"]
+offset_left = -230.0
+offset_top = 20.0
+offset_right = 188.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fire5" type="Sprite2D" parent="fires"]
+position = Vector2(586, 764)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_cswhg")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="fires/fire5"]
+offset_left = -230.0
+offset_top = 20.0
+offset_right = 188.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.290196)
+anchors_preset = -1
+anchor_left = 0.248
+anchor_top = 0.356
+anchor_right = 0.906
+anchor_bottom = 0.356
+offset_left = -156.704
+offset_top = 360.96
+offset_right = 712.912
+offset_bottom = 720.96
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7w457")
+
+[node name="star" type="Sprite2D" parent="."]
+position = Vector2(323, 575.5)
+scale = Vector2(0.100371, 0.0747525)
+texture = ExtResource("3_fm2n3")
+
+[node name="restart" type="Button" parent="."]
+offset_left = 241.0
+offset_top = 541.0
+offset_right = 406.0
+offset_bottom = 614.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+shortcut = SubResource("Shortcut_k4x3a")
+text = "New Round"
+flat = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 203.0
+offset_top = 26.0
+offset_right = 465.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.792157, 0.227451, 0.145098, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 0.905882, 0.996078, 1)
+theme_override_font_sizes/font_size = 43
+text = "Score: "
+
+[node name="tada" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(51, -20)
+stream = ExtResource("4_yqhws")
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
