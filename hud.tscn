@@ -116,16 +116,23 @@ offset_bottom = 720.96
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7w457")
 
+[node name="star2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.768627, 0.435294, 1)
+position = Vector2(325, 597)
+scale = Vector2(0.0863091, 0.0748916)
+texture = ExtResource("3_fm2n3")
+
 [node name="star" type="Sprite2D" parent="."]
-position = Vector2(323, 575.5)
-scale = Vector2(0.100371, 0.0747525)
+clip_children = 2
+position = Vector2(331, 590)
+scale = Vector2(0.0857363, 0.0747525)
 texture = ExtResource("3_fm2n3")
 
 [node name="restart" type="Button" parent="."]
-offset_left = 241.0
-offset_top = 541.0
-offset_right = 406.0
-offset_bottom = 614.0
+offset_left = 265.0
+offset_top = 571.0
+offset_right = 395.0
+offset_bottom = 602.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 shortcut = SubResource("Shortcut_k4x3a")
 text = "New Round"

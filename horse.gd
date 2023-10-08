@@ -6,6 +6,7 @@ signal game_end
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_on_hud_new_round()
+	$"../TextureRect2".play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
